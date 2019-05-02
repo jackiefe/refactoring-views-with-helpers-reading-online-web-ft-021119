@@ -22,9 +22,9 @@ class PostsController < ApplicationController
 	 # @post.update(post_params)
 	 # redirect_to post_path(@post)
 	  
-	 # @post = Post.find(params[:id])
-	 # @post.update(params.require(:post))
-	 # redirect_to post_path(@post)
+	  @post = Post.find(params[:id])
+	  @post.update(params.require(:post))
+	  redirect_to post_path(@post)
 	end
 
 	def edit
